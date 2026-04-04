@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HodgeLabs Browser</title>
+  <meta
+    name="description"
+    content="A structured browser homepage for programming, games, homelab, media, and everyday tools."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero__top">
+        <div class="brand">
+          <div class="brand__logo">H</div>
+          <div class="brand__text">
+            <div class="brand__title">HodgeLabs Browser</div>
+            <div class="brand__subtitle">Structured, fast, and built for daily use</div>
+          </div>
+        </div>
+
+        <div class="hero__meta">
+          <div class="meta-card">
+            <span class="meta-card__label">Local Time</span>
+            <span class="meta-card__value" id="time">--:--</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__intro">
+          <p class="hero__eyebrow">PERSONAL START PAGE</p>
+          <h1 id="greeting">Good Morning, Friend</h1>
+          <p class="hero__description">
+            Browse your programming resources, games, homelab services, media, and daily-use tools in one place.
+          </p>
+        </div>
+
+        <div class="hero__actions">
+          <form id="searchForm" class="search-panel" autocomplete="off">
+            <label for="searchInput" class="search-panel__label">DuckDuckGo Search</label>
+            <div class="search-panel__row">
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="Search the web..."
+                aria-label="Search the web"
+              />
+              <button type="submit">Search</button>
+            </div>
+          </form>
+
+          <section class="quick-links-panel">
+            <div class="panel-heading">
+              <h2>Quick Links</h2>
+            </div>
+            <div id="quickLinks" class="quick-links"></div>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-layout">
+      <section class="library-panel">
+        <div class="library-panel__top">
+          <div>
+            <p class="section-eyebrow">RESOURCE LIBRARY</p>
+            <h2>Browse Categories</h2>
+            <p class="library-panel__description">
+              Search through categories, sections, descriptions, and tags.
+            </p>
+          </div>
+        </div>
+
+        <div class="library-toolbar">
+          <div class="library-toolbar__field">
+            <label for="librarySearch">Filter Library</label>
+            <input
+              id="librarySearch"
+              type="text"
+              placeholder="Search links, descriptions, and tags..."
+              aria-label="Filter library"
+            />
+          </div>
+        </div>
+
+        <div id="treeRoot" class="tree-root"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Category parts -->
+  <script src="./js/config/programming.js"></script>
+  <script src="./js/config/games.js"></script>
+  <script src="./js/config/homelab.js"></script>
+  <script src="./js/config/everyday-tools.js"></script>
+  <script src="./js/config/media-entertainment.js"></script>
+
+  <!-- Combined config + renderer -->
+  <script src="./js/config.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
