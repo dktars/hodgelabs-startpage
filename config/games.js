@@ -1,7 +1,7 @@
 window.HODGELABS_CONFIG_PARTS = window.HODGELABS_CONFIG_PARTS || {};
 
 window.HODGELABS_CONFIG_PARTS.games = {
-    title: "Gameing",
+    title: "Gaming",
     subcategories: [
         {
             title: "Free Online Games",
